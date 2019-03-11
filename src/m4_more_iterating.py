@@ -232,7 +232,7 @@ def sum_sequence(sequence):
     #         as an ORACLE in TESTING this function, however.
     # -------------------------------------------------------------------------
     sum = 0
-    for k in range (len(sequence)):
+    for k in range(len(sequence)):
         sum = sum + sequence[k]
     return sum
 
@@ -570,6 +570,7 @@ def count_positive_sines(numbers):
             count = count + 1
     return count
 
+
 def run_test_sum_first_n():
     """ Tests the   sum_first_n   function. """
     # -------------------------------------------------------------------------
@@ -681,7 +682,7 @@ def sum_first_n(numbers, n):
       :type n: int
     """
     # -------------------------------------------------------------------------
-    # TODO: 9. Implement and test this function.
+    # done: 9. Implement and test this function.
     #          Tests have been written for you (above).
     #
     # RESTRICTION:
