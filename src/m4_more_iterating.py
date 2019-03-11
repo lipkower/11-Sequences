@@ -36,8 +36,8 @@ def main():
     """ Calls the   TEST   functions in this module. """
     # run_test_sum_sequence()
     # run_test_count_items_bigger_than()
-    run_test_count_positive_sines()
-    # run_test_sum_first_n()
+    # run_test_count_positive_sines()
+    run_test_sum_first_n()
 
 
 def run_test_sum_sequence():
@@ -573,7 +573,7 @@ def count_positive_sines(numbers):
 def run_test_sum_first_n():
     """ Tests the   sum_first_n   function. """
     # -------------------------------------------------------------------------
-    # TODO: 8. Implement this TEST function.
+    # done: 8. Implement this TEST function.
     #   It TESTS the  sum_first_n  function defined below.
     #   Include at least ** 2 ** ADDITIONAL tests.
     #
@@ -642,14 +642,28 @@ def run_test_sum_first_n():
     print('Test 7 expected:', expected)
     print('       actual:  ', actual)
 
-    # TO DO 8 (continued):  Add your 2 ADDITIONAL tests here:
+    # done: 8 (continued):  Add your 2 ADDITIONAL tests here:
+
+    # Test 8:
+    expected = 65
+    actual = sum_first_n([4, 3, 51, 7], 4)
+    print()
+    print('Test 8 expected:', expected)
+    print('       actual:  ', actual)
+
+    # Test 9:
+    expected = 83
+    actual = sum_first_n([48, -10, 45, 5], 3)
+    print()
+    print('Test 9 expected:', expected)
+    print('       actual:  ', actual)
 
 
 def sum_first_n(numbers, n):
     """
     What comes in:
       -- An sequence of numbers.
-      -- A nonnegative integer   n   that is less than or equal to
+      -- A non-negative integer   n   that is less than or equal to
            the length of the given sequence.
     What goes out:
       Returns the sum of the first   n   numbers in the given sequence,
@@ -676,6 +690,10 @@ def sum_first_n(numbers, n):
     #      -- The TESTING code above does use   built_ins.sum
     #         as an ORACLE in TESTING this function, however.
     # -------------------------------------------------------------------------
+    sum = 0
+    for k in range(n):
+        sum = sum + numbers[k]
+    return sum
 
 
 # -----------------------------------------------------------------------------
